@@ -1,2 +1,3 @@
-# crawler
-web crawler
+# web crawler
+execution in shell:
+`python3 web.py`
