@@ -1,6 +1,23 @@
 import requests
 import re
 import urllib
+import sys
+
+if len(sys.argv) != 2:
+    print("Wrong arguments.")
+    print("Use:")
+    print("python3 web.py <n>")
+    print("where <n> is the number of depth levels.")
+    exit()
+
+try:
+    depth = int(sys.argv[1])
+except:
+    print("Wrong arguments.")
+    print("Use:")
+    print("python3 web.py <n>")
+    print("where <n> is the number of depth levels.")
+    exit()
 
 reg_exp = r"/wiki/%[a-zA-Z\.0-9/_%]+"
 
@@ -14,7 +31,7 @@ lvl = 0
 q = []
 q.append(url)
 i = 0
-while lvl < 3:
+while lvl < depth:
     print("\n\nLevel " + str(lvl + 1) + ":")
     n = len(q)
     while i < n:
