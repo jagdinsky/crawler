@@ -1,5 +1,6 @@
-#### Web crawler for kazakhstan wikipedia
-Execution in shell:
-`python3 web.py`
+#### Web crawler for wikipedia
 
-Program starts entering kazakhstani wikipedia (https://kk.wikipedia.org/wiki/Басты_бет) and picks other kk.wikipedia.org links via bfs algorithm (goes 3 levels deep) and regular expression.
+Program uses bfs algorithm (<n> depth levels) to print out kazakhstani version of wikipedia pages starting by [main page] (https://kk.wikipedia.org/wiki/Басты_бет) and going on with links that are pointed picking them via regular expression.
+
+Execution in shell:
+`python3 web.py <n>`
